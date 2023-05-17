@@ -1,0 +1,52 @@
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  height: 100vh; /* Set the height of the button container to full viewport height */
+  overflow: hidden;
+}
+
+.button {
+  display: none;
+  padding: 10px;
+}
+
+.button.active {
+  display: block;
+}
+
+.swipe-left {
+  animation: swipeLeftAnimation 1s;
+}
+.swipe-right {
+  animation: swipeRightAnimation 1s;
+}
+
+@keyframes swipeLeftAnimation {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-10%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
+@keyframes swipeRightAnimation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(10%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
