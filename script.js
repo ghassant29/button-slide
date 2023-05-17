@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     activeButton = (activeButton + 1) % buttons.length;
 
     buttons[activeButton].classList.add("active");
-
-    buttons[activeButton].classList.add("swipe-left");
   }
 
   const buttonContainer = document.querySelector(".button-container");
